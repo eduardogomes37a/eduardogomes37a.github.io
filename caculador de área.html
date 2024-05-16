@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora de area</title>
+</head>
+<body>
+    <script>
+        alert('bem vindo a calculadora de área')
+        let controle = true
+        while(controle){
+            //calcular area do retangulo
+            function area_do_retangulo(){
+                function area_retangulo(altura_retangulo,largura){
+                    return (altura_retangulo*largura)
+                }
+                console.log('\ncalculo do retangulo')
+                let altura_retangulo = parseFloat(prompt('isira a altura do retangulo'))
+                console.log('a altura do retangulo é: ',altura_retangulo)
+                let largura = parseFloat(prompt('insira a largura do retangulo'))
+                console.log('a altura do retangulo é: ',largura)
+                let area_retangulo_valor = area_retangulo(altura_retangulo,largura)
+                console.log('a área do terreno é: '+ area_retangulo_valor)
+                // vai repetir?
+                let continua = prompt('a mais áreas a ser calculadas\ns/n')
+                if (continua === 'n'){
+                    alert('sistama a desligar')
+                    console.log('\nobrigado por utilizar')
+                    controle = false
+            }
+            }
+            // calcular área do quadrado
+            function area_do_quadrado(){
+                function area_quadrado(lado){
+                    return (lado*lado)
+                }
+                console.log('\ncalculo do quadrado')
+                let lado = parseFloat(prompt('digite o valor dos lados do quadrado'))
+                console.log('o valor dos lados do quadrado é: ',lado)
+                let area_quadrado_valor = area_quadrado(lado)
+                console.log('a área do terreno é: '+ area_quadrado_valor)
+                // vai repetir?
+                let continua = prompt('a mais áreas a ser calculadas\ns/n')
+                if (continua === 'n'){
+                    alert('sistama a desligar')
+                    console.log('\nobrigado por utilizar')
+                    controle = false
+                }
+            }
+            // calcular área do triangulo
+            function area_do_triangulo(){
+                function area_triangulo(base,altura_triangulo){
+                    return (base*altura_triangulo)/2
+                }
+                console.log('\ncalculo do triangulo')
+                let base = parseFloat(prompt('insira o valor da base do triangulo'))
+                console.log('a base do triangulo é: ',base)
+                let altura_triangulo = parseFloat(prompt('isira o valor da altura do triangulo'))
+                console.log('a altura do triangulo é: ',altura_triangulo)
+                let area_triangulo_valor = area_triangulo(base,altura_triangulo)
+                console.log('a área do triangulo é: '+ area_triangulo_valor)
+                // vai repetir?
+                let continua = prompt('a mais áreas a ser calculadas\ns/n')
+                if (continua === 'n'){
+                    alert('sistama a desligar')
+                    console.log('\nobrigado por utilizar')
+                    controle = false
+                }
+            }
+            // calcular área do losangolo
+            function area_do_losangolo(){
+                function area_losangolo(diagonal_maior,diagonal_menor){
+                    return (diagonal_maior*diagonal_menor)/2
+                }
+                console.log('\ncalculo do losangolo')
+                let diagonal_maior = parseFloat(prompt('insira o valor da diagonal maior'))
+                console.log('a diagonal maior do losangolo é: ',diagonal_maior)
+                let diagonal_menor = parseFloat(prompt('insira o valor da diagonal menor'))
+                console.log('a diagonal menor do losangolo é: ',diagonal_menor)
+                let area_losangolo_valor = area_losangolo(diagonal_maior,diagonal_menor)
+                console.log('a ára do losangolo é: ',area_losangolo_valor)
+                // vai repetir?
+                let continua = prompt('a mais áreas a ser calculadas\ns/n')
+                if (continua === 'n'){
+                    alert('sistama a desligar')
+                    console.log('\nobrigado por utilizar')
+                    controle = false
+                }
+            }
+            // calcular área do trapesio
+            function area_do_trapesio(){
+                function area_trapesio(base_maior,base_menor,altura_trapesio){
+                    return ((base_maior+base_menor)*altura_trapesio)/2
+                }
+                console.log('\ncalculo do trapesio')
+                let base_maior = parseFloat(prompt('insira o valor da base maior'))
+                console.log('a base maior do trapesio é: ',base_maior)
+                let base_menor = parseFloat(prompt('insira o valor da base menor'))
+                console.log('a base menor do trapesio é: ',base_menor)
+                let altura_trapesio = parseFloat(prompt('insira o valor da altura'))
+                console.log('a altura do trapesio é: ',altura_trapesio)
+                let area_trapesio_valor = area_trapesio(base_maior,base_menor,altura_trapesio)
+                console.log('a área do trapesio é: ',area_trapesio_valor)
+                // vai repetir?
+                let continua = prompt('a mais áreas a ser calculadas\ns/n')
+                if (continua === 'n'){
+                    alert('sistama a desligar')
+                    console.log('\nobrigado por utilizar')
+                    controle = false
+                }
+            }
+            // calcular área do circulo
+            function area_do_circulo(){
+                function area_circulo(raio,pi){
+                    return (pi*(raio*raio))
+                }
+                const pi = 3.14
+                alert("valor de pi é 3,14")
+                console.log('o valor de pi é: ',pi)
+                let raio = parseFloat(prompt('insira o valor do raio'))
+                console.log('o valor do raio é: ',raio)
+                area_circulo_valor = area_circulo(raio,pi)
+                console.log('a área do circulo é: ',area_circulo_valor)
+                // vai repetir?
+                let continua = prompt('a mais áreas a ser calculadas\ns/n')
+                if (continua === 'n'){
+                    alert('sistama a desligar')
+                    console.log('\nobrigado por utilizar')
+                    controle = false
+                }
+            }
+            //siistema de seleção de tipo
+            
+            let qual = prompt('por favor selecione qual tipo de área sera calculada\n1: retangular\n2: quadrada\n3: triangular\n4: losangolo\n5: trapesio\n6: circulo\ndesligar o sistema')
+            if (qual == 1){
+                area_do_retangulo()
+            }
+            else if (qual == 2){
+                area_do_quadrado()
+            }
+            else if (qual == 3){
+                area_do_triangulo()
+            }
+            else if (qual == 4){
+                area_do_losangolo()
+            }
+            else if (qual == 5){
+                area_do_trapesio()
+            }
+            else if (qual == 6){
+                area_do_circulo()
+            }
+            else{
+                alert('sistama a desligar')
+                console.log('\nobrigado por utilizar')
+                controle = false
+            }
+        }
+    </script>
+</body>
+</html>
